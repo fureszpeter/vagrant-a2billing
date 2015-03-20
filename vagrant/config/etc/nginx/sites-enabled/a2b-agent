@@ -1,0 +1,12 @@
+#A2Billing - Agent
+server {
+        location ~ /(default\.php|index\.php)/(.*){
+            index $1;
+            try_files $uri /$1?$args;
+        }
+
+        include /etc/nginx/include.d/common-php;
+        root /vagrant/a2billing/agent/;
+        server_name agent.a2b.dev;
+}
+

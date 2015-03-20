@@ -1,0 +1,12 @@
+
+# PhpStorm
+.idea/
+*.iml
+
+#Vagrant
+.vagrant
+
+tools/*
+
+a2billing/*
+!/a2billing/.gitkeep

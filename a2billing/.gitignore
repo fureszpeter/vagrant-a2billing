@@ -1,0 +1,11 @@
+*.pyc
+*dilla*
+*.db
+*nbproject*
+*devserver*
+*sublime*
+*~
+
+# PhpStorm
+.idea/
+*.iml

@@ -1,0 +1,12 @@
+#Virgo - Expat - admin
+server {
+        location ~ /(default.php|index\.php)/(.*){
+            index $1;
+            try_files $uri /$1?$args;
+        }
+
+        include /etc/nginx/include.d/common-php;
+        root /vagrant/;
+        server_name localhost;
+}
+

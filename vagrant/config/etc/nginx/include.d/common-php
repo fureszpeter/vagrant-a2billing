@@ -1,0 +1,29 @@
+        index index.php index.html index.htm;
+        location / {
+                try_files $uri $uri/ /index.php?/$request_uri;
+        }
+
+
+        # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
+        #
+        location ~ \.php$ {
+		fastcgi_buffer_size 128k;
+		fastcgi_buffers 4 256k;
+		fastcgi_busy_buffers_size 256k;
+		fastcgi_read_timeout 600;
+
+                fastcgi_split_path_info ^(.+\.php)(/.+)$;
+                fastcgi_pass unix:/var/run/php5-fpm.sock;
+                fastcgi_index index.php;
+                include fastcgi_params;
+
+		fastcgi_split_path_info ^(.+\.php)(/.+)$;
+		#NOTE: You should have "cgi.fix_pathinfo = 0;" in php.ini
+        }
+
+        # deny access to .htaccess files, if Apache's document root
+        # concurs with nginx's one
+        #
+        location ~ /\.ht {
+                deny all;
+        }
