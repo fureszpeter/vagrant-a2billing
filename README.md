@@ -4,12 +4,23 @@ vagrant-a2billing
 You can set up a full working A2Billing with Asterisk Realtime functions by a simple `vagrant up` command.
 Vagrant will set up your `hosts` file 
 
-1. Admin: http://admin.a2b.dev:8080/
-2. Agent: http://agent.a2b.dev:8080/
-3. User : http://user.a2b.dev:8080/
+Virtual machine IP is: 33.33.33.11 however you don't need it, because hostmanager updates your hosts file.
+
+1. Admin: http://admin.a2b.dev/
+2. Agent: http://agent.a2b.dev/
+3. User : http://user.a2b.dev/
 
 You can register you SIP client on proxy: user.a2b.dev:5060
 
+
+Main features
+------------
+
+1. php-fpm
+2. Nginx
+3. composer
+4. Asterisk Realtime
+5. A2billing
 
 Installation
 ------------
