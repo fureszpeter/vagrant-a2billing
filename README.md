@@ -1,7 +1,32 @@
-# vagrant-a2billing
+vagrant-a2billing
+==================
+
+You can set up a full working A2Billing with Asterisk Realtime functions by a simple `vagrant up` command.
+Vagrant will set up your `hosts` file 
+
+1. Admin: http://admin.a2b.dev:8080/
+2. Agent: http://agent.a2b.dev:8080/
+3. User : http://user.a2b.dev:8080/
+
+You can register you SIP client on proxy: user.a2b.dev:5060
 
 
-#Default passwords
+Installation
+------------
+We depends on hostmanager, so first install the plugin.
+
+Install the plugin following the typical Vagrant 1.1 procedure:
+
+    $ vagrant plugin install vagrant-hostmanager
+    
+    $ vagrant up
+        
+You may be prompted for password in order to write hosts file. For passwordless startup please read:
+https://github.com/smdahlen/vagrant-hostmanager/blob/master/README.md#passwordless-sudo
+
+
+Default passwords
+-----------------
 
 MySQL root:
 - username: root
@@ -30,7 +55,7 @@ http://admin.a2b.dev
 URL: http://agent.a2b.dev
 you can set the login on the admin
 
-#Agent
+#User
 URL: http://user.a2b.dev
 you can set the login on the admin
 
